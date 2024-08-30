@@ -3,7 +3,7 @@ ENV CGO_ENABLED 0
 WORKDIR /app
 RUN apk add --no-cache git ca-certificates make cmake
 ENV GOBIN=/app/bin
-RUN git clone https://github.com/dbildungscloud/clammit --branch main . && make all
+RUN git clone https://github.com/dbildungsplattform/clammit --branch main . && make all
 
 # Build runtime image
 FROM alpine:3.20
